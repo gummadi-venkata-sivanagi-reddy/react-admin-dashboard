@@ -1,80 +1,152 @@
-\# 📊 Advanced React Admin Dashboard (Full-Stack Integration)
+# React Admin Dashboard
 
+A React-based employee management dashboard integrated with a Spring Boot REST API and MySQL database.
 
+The application provides employee CRUD operations, search functionality, and a dashboard that displays employee statistics using data fetched from the backend.
 
-A high-performance, enterprise-grade data management and analytics dashboard built with \*\*React\*\*, \*\*Spring Boot\*\*, and \*\*MySQL\*\*. This project showcases the seamless integration of a modern frontend with a robust REST API backend.
+## Features
 
+- Employee management with Create, Read, Update, and Delete operations
+- Search employees by name, email, or department
+- Dashboard with employee statistics
+- Total employee count
+- Total department count
+- Average employee salary
+- Department-wise employee visualization using Recharts
+- REST API integration using Axios
+- Client-side navigation using React Router
+- Functional components and React Hooks
+- Reusable service layer for API communication
 
+## Tech Stack
 
-\## 🚀 Impactful Features
+- React.js
+- JavaScript
+- React Hooks
+- Axios
+- React Router DOM
+- Recharts
+- HTML5
+- CSS3
+- Spring Boot REST API
+- MySQL
 
-\- \*\*Real-time Analytics:\*\* Integrated with \*\*Recharts\*\* to visualize complex data through interactive Bar and Line charts.
+## Application Structure
 
-\- \*\*RESTful Integration:\*\* Consumes live data from a Spring Boot backend using \*\*Axios\*\* with global error handling.
+```text
+src/
+├── components/
+│   ├── Navbar.js
+│   └── Sidebar.js
+├── pages/
+│   ├── Dashboard.js
+│   └── Employees.js
+├── services/
+│   └── employeeService.js
+├── App.js
+└── index.js
+```
 
-\- \*\*Advanced Data Management:\*\* Features a dynamic directory with real-time \*\*Search \& Filter\*\* logic.
+## Employee Management
 
-\- \*\*Modular Architecture:\*\* Follows a clean \*\*Service-based design pattern\*\* for high maintainability.
+The Employees page communicates with the Spring Boot backend and supports:
 
-\- \*\*Professional UI/UX:\*\* Sleek Sidebar-Navbar navigation with responsive card-based layouts.
+- Add employee
+- View employee list
+- Update employee
+- Delete employee
+- Search employees
 
+Employee data includes:
 
+- Name
+- Email
+- Department
+- Salary
 
-\## 🛠️ Technical Tech Stack
+## Dashboard
 
-\- \*\*Frontend Framework:\*\* React.js (Hooks \& Functional Components)
+The dashboard retrieves employee data from the backend and calculates:
 
-\- \*\*Data Fetching:\*\* Axios (Asynchronous REST API Client)
+- Total Employees
+- Total Departments
+- Average Salary
+- Employees by Department
 
-\- \*\*Charts \& Visualization:\*\* Recharts Library
+Department-wise employee counts are displayed using a Recharts bar chart.
 
-\- \*\*Routing:\*\* React Router DOM (v6)
+## Backend Integration
 
-\- \*\*Architecture:\*\* Layered Pattern (Components -> Services -> API)
+The frontend communicates with the Employee Management REST API through Axios.
 
+Backend API:
 
+```text
+http://localhost:8087/api/employees
+```
 
-\## 📸 Project Previews
+Supported operations:
 
+```text
+GET    /api/employees
+GET    /api/employees/{id}
+POST   /api/employees
+PUT    /api/employees/{id}
+DELETE /api/employees/{id}
+```
 
+## Project Screenshots
 
-\### 💹 Main Analytics Dashboard
+### Dashboard
 
-Detailed overview of company metrics and interactive growth charts.
+![Dashboard](./screenshots/dashboard-view.png)
 
-!\[Dashboard View](./screenshots/dashboard-view.png)
+### Employee Management
 
+![Employee List](./screenshots/employee-list.png)
 
+### Employee Search
 
-\### 👥 Employee Management Hub
+![Search](./screenshots/search-filter-action.png)
 
-Dynamic table rendering real-time data fetched from the backend.
+## Running the Application
 
-!\[Employee List](./screenshots/employee-list.png)
+### 1. Clone the repository
 
+```bash
+git clone https://github.com/gummadi-venkata-sivanagi-reddy/react-admin-dashboard.git
+```
 
+### 2. Install dependencies
 
-\### 🔍 Real-time Search Implementation
+```bash
+npm install
+```
 
-High-performance client-side filtering logic showcased.
+### 3. Start the Backend
 
-!\[Search Action](./screenshots/search-filter-action.png)
+Run the Employee Management Spring Boot REST API on port:
 
+```text
+8087
+```
 
+### 4. Start the Frontend
 
-\## ⚙️ Installation \& Usage
+```bash
+npm start
+```
 
-1\. \*\*Clone the Repo:\*\* `git clone https://github.com/gummadi-venkata-sivanagi-reddy/react-admin-dashboard.git`
+The application runs at:
 
-2\. \*\*Setup Frontend:\*\* Navigate to the folder and run `npm install`.
+```text
+http://localhost:3000
+```
 
-3\. \*\*Backend Requirement:\*\* Ensure the \*\*Spring Boot Employee API\*\* is running on `http://localhost:8087`.
+## Related Backend Project
 
-4\. \*\*Launch Application:\*\* Run `npm start` to view the dashboard at `localhost:3000`.
+This frontend application works with the Employee Management REST API built using Spring Boot, Spring Data JPA, Hibernate, and MySQL.
 
+---
 
-
-\---
-
-\*\*Developed by Siva Reddy | Java Full Stack Developer\*\*
-
+**Developed by Siva Reddy | Java Full Stack Developer**
